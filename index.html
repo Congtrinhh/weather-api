@@ -18,30 +18,55 @@
     <script defer src="./js/main.js"></script>
 </head>
 <body>
-    <div id="app">
-      <div class="current-area container row p-2"></div>
 
-      <!-- Buttons -->
-      <ul class="container">
-        <li><button type="button" class="btn btn-forcast" data-forcast="3">3 ngày tới</button></li>
-        <!-- <li><button type="button" class="btn btn-forcast" data-forcast="7">7 ngày tới</button></li> -->
-      </ul>
+    <div id="app">
+      <header class="header mb-5">
+        <div class="container">
+          <h1 class="logo">Congtrinhh</h1>
+        <p class="banner">Bản tin dự báo thời tiết</p>
+        </div>
+      </header>
+
       <!-- Province option -->
-      <div class="container">
+      <div class="select-provice container">
         <select name="province" id="province">
-        <option value="Hanoi">Hà Nội</option>
-          <option value="Lao cai" selected>Lào cai</option>
+          <!-- <option value="Lao cai" selected>Lào cai</option> -->
+        <!-- <option value="Hanoi">Hà Nội</option>
           <option value="Ho chi minh">Hồ Chí Minh</option>
-          <option value="London">London</option>
+          <option value="London">London</option> -->
       </select>
       </div>
 
-      <div class="forcast-area row container p-2 mt-3">
-        <!-- Tomorrow -->
-        <div class="tomorrow container row px-5 py-2"></div>
-        <!-- Following days -->
-        <div class="following-days container row px-5 py-2"></div>
+      <!-- Current weather -->
+      <div class="current-area container"></div>
+
+      <!-- Dash -->
+      <div class="container"><div class="dash"></div></div>
+
+      <!-- Buttons -->
+      <ul class="container">
+        <li><button type="button" class="btn btn-forcast" data-forcast="3">3 ngày tới &nbsp;&gt;&gt;</button></li>
+        <!-- <li><button type="button" class="btn btn-forcast" data-forcast="7">7 ngày tới</button></li> -->
+      </ul>
+
+      <!-- Loader -->
+      <div class="loader container mt-1">
+      <div class="la-line-scale" style="color: var(--secondary-color)">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
+    </div>
+
+      <div class="forcast-area row container mt-1"></div>
+
+      <footer class="footer mt-5">
+        <div class="container">
+          <span class="copy-right"> @Trịnh Quý Công 2021</span>
+        <p>API from <a href="https://www.weatherapi.com/">weatherapi.com</a></p>
+        </div>
+      </footer>
     </div>
 </table>
 </body>

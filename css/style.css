@@ -5,10 +5,16 @@ body {
 .container {
     max-width: 700px;
 }
-
-.current-area,
+.current-area > div{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.current-area > div,
 .forcast-area > div {
     background-color: #fff;
+}
+.current-area > div {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .current-area .header,
@@ -63,25 +69,20 @@ body {
 
 
 /* ----------------- tomorrow */
-.tomorrow .temperature {
+.forcast-area  {
+}
+.forcast-area .temperature {
     height: 100%;
 
 }
-.tomorrow .temperature .degree {
+.forcast-area .temperature .degree {
     display: flex;
         font-size: 24px;
     font-weight: 500;
 }
-.tomorrow .temperature .degree > * {
+.forcast-area .temperature .degree > * {
     margin-bottom: 0;
 }
-
-.tomorrow .detail > * {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-
 
 .forcast-area > div {
     margin-top: 20px;
@@ -89,4 +90,74 @@ body {
 
 .forcast-area > div > .header {
     font-size: 20px;
+}
+
+.following-day {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.following-day .header {
+    font-size: 21px;
+}
+/* ------------ header ------------ */
+header.header {
+    background-color: var(--primary-color);
+    padding: 20px 0 50px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.header .logo {
+    color: var(--tertiary-color);
+    color: #fff;
+}
+.header .banner {
+        font-size: 20px;
+    color: var(--tertiary-color);
+    font-weight: 600;
+}
+
+/* -------- province select */
+.select-provice select {
+        padding: 10px;
+    border-radius: 4px;
+    border-color: var(--tertiary-color);
+}
+
+/* Footer */
+.footer {
+    padding: 50px 0;
+    background-color: var(--quaternary-color);
+    color: #fff;
+}
+.footer span {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.footer a {
+    color: var(--tertiary-color);
+    color: var(--secondary-color);
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 992px) {
+    .current-area .temperature, .forcast-area .temperature {
+    justify-content: center;
+}
+
+.current-area .temperature > *:first-child, .forcast-area .temperature > *:first-child {
+    padding-left: 0px;
+}
+
+.current-area .temperature > *, .forcast-area .temperature > * {
+    flex-grow: 0;
+}
+.dash {
+    display: none;
+}
+.btn {
+    margin-top: 40px;
+}
 }

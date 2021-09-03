@@ -1,0 +1,92 @@
+body {
+    background-color: #eee;
+}
+
+.container {
+    max-width: 700px;
+}
+
+.current-area,
+.forcast-area > div {
+    background-color: #fff;
+}
+
+.current-area .header,
+.forcast-area .header {
+    margin-bottom: 10px;
+}
+
+.current-area .temperature,
+.forcast-area .temperature {
+    display: flex;
+    align-items: center;
+}
+.current-area .temperature > *,
+.forcast-area .temperature > * {
+    flex-grow: 1;
+}
+.current-area .temperature > *:first-child,
+.forcast-area .temperature > *:first-child {
+    flex-grow: 0;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+.temperature .degree > * {
+    margin-bottom: 10px;
+}
+.temperature .degree > .text {
+    font-weight: 500;
+}
+
+
+
+.current-area .detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail > *{
+        display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #ccc;
+}
+.detail > *:last-child {
+    border-bottom: none;
+}
+
+.detail > * > span {
+        font-size: 17px;
+    font-weight: 500;
+}
+
+
+/* ----------------- tomorrow */
+.tomorrow .temperature {
+    height: 100%;
+
+}
+.tomorrow .temperature .degree {
+    display: flex;
+        font-size: 24px;
+    font-weight: 500;
+}
+.tomorrow .temperature .degree > * {
+    margin-bottom: 0;
+}
+
+.tomorrow .detail > * {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+.forcast-area > div {
+    margin-top: 20px;
+}
+
+.forcast-area > div > .header {
+    font-size: 20px;
+}

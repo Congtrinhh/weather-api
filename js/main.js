@@ -40,7 +40,7 @@ function handleDataDisplay(jsonData) {
  * -------------------------------------------------------------
  */
 const weatherapiAPIKey = 'b2275dc7728d494b8f424204210309';
-const baseUrl = 'http://api.weatherapi.com/v1'
+const baseUrl = 'https://api.weatherapi.com/v1'
 const URIs = ["/current.json", "/forecast.json",]
 
 // fetch(`${baseUrl}?key=${weatherapiAPIKey}&q=Hanoi&lang=vi`, {

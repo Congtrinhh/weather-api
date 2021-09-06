@@ -83,13 +83,15 @@ function useFetch(uri = "/current.json", options = {
 function handleDisplayForcast(locationObj) {
     const forcastArray = locationObj.forecast.forecastday;
 
-    const html = forcastArray.map(forecast => {
+    const html = forcastArray.map((forecast, idx) => {
         const { date, day } = forecast;
         const { avghumidity, condition, daily_chance_of_rain, maxtemp_c, mintemp_c, totalprecip_mm } = day;
         const { text: conditionText, icon: conditionIconLink } = condition;
 
         let [y, m, d] = date.split('-');
-        const today = `Ngày ${d >= 10 ? d : d.substr(1)} tháng ${m >= 10 ? m : m.substr(1)}`;
+        let today = `Ngày ${d >= 10 ? d : d.substr(1)} tháng ${m >= 10 ? m : m.substr(1)}`;
+        if (idx == 0) today = 'Hôm nay';
+
         return (
             `
             <div class="col-12">
